@@ -1,11 +1,11 @@
-Loan Approval Prediction using Random Forest Classifier
+**#Loan Approval Prediction using Random Forest Classifier#**
 
-1. Introduction
-
+**1. Introduction
+**
 This project aims to build a machine learning model to predict loan approval based on applicant details. The dataset consists of multiple features, including demographic information, financial status, and loan application details. The primary goal is to enhance prediction accuracy using a Random Forest Classifier and optimize its performance through hyperparameter tuning.
 
-2. Data Preprocessing
-
+**2. Data Preprocessing
+**
 2.1 Importing Required Libraries
 
 import numpy as np
@@ -58,8 +58,8 @@ x = df.drop(columns=['Loan_Status'])
 y = df['Loan_Status']
 xtrain, xtest, ytrain, ytest = train_test_split(x, y, test_size=0.2, random_state=42)
 
-3. Model Training and Evaluation
-
+**3. Model Training and Evaluation
+**
 3.1 Initial Model Training using Random Forest Classifier
 
 model = RandomForestClassifier(n_estimators=100, random_state=42)
@@ -81,8 +81,8 @@ plt.xlabel('Predicted')
 plt.ylabel('Actual')
 plt.show()
 
-4. Hyperparameter Tuning using Grid Search
-
+**4. Hyperparameter Tuning using Grid Search
+**
 To optimize the model, we perform hyperparameter tuning using Grid Search.
 
 param_grid = {
@@ -122,8 +122,8 @@ plt.xlabel('Predicted')
 plt.ylabel('Actual')
 plt.show()
 
-5. Conclusion
-
+**5. Conclusion
+**
 After implementing hyperparameter tuning using Grid Search, we observed that increasing n_estimators to 200 did not result in any change in accuracy. However, there were differences observed in the confusion matrix, indicating variations in classification distribution. The optimized Random Forest Classifier remains a suitable choice for loan approval prediction.
 
 Key Takeaways:
@@ -136,8 +136,8 @@ Hyperparameter tuning using Grid Search can modify classification results withou
 
 A well-tuned model can better classify loan applicants and improve decision-making processes.
 
-6. Future Scope
-
+**6. Future Scope
+**
 Experimenting with other machine learning models such as XGBoost or Neural Networks.
 
 Applying feature engineering techniques to improve prediction accuracy.
